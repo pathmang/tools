@@ -1,0 +1,64 @@
+<htm>
+ <head>
+  <script type="text/javascript">
+   function answers()
+    {var q1=1; q12=0;
+	 var values=document.forms[0].elements["row"+q1+"[]"];
+	 //var values=document.forms[0].elements["row1[]"];
+//var p_ids = document.forms[0].elements["p_id[]"]; 
+      
+	  document.write ("value=" + values[1].value + " length= " + values.length);
+	  document.write("<table border=1 bordercolor=blue width=270 >");
+	  for (var row=1; row<10; row++) {
+	   document.write("<tr>");
+	   for (var col=1; col<10; col++) {
+	    document.write("<td align=center> "+ values[col-1].value +"</td>");
+	   }
+	   document.write("</tr>");
+	  }
+	  document.write("</table>");
+
+     alert("The answers are on the page, check them out. They will disappear when you click ok!");
+	 }
+	 
+  </script>
+  
+   <style>
+    .header  {background-color: #eeeeee; color: darkblue; text-align: center; padding: 1px; font: arial 20px; border: 1px solid darkblue;}
+	 section {background-color: white; color: darkblue; text-align: left;  floating: left; padding: 10px; font: 15px arial;}
+	 h2      {color: darkgreen;}
+	 .questions  {color: darkblue; font: 12px arial}
+	 .title  {color: darkgreen; font: 15px arial;}
+	 .bigtitle  {color: darkblue; font: 18px arial;}
+   </style>
+ </head>
+   
+<title>Sudoku Solver -- under construction</title>
+
+<body>
+ <p class="header"><b>Hello people, welcome to my Sudoku Solving System</b></p>
+<br>
+<p class="bigtitle"><b>Easy as pie.. being built by Pathman<b/>:</p>
+ 
+ <form name=sudoku method=post>
+  <table border=1>
+ <script language="javascript" type="text/javascript">
+  //document.write("hello2");
+  
+  for (var row=1; row<10; row++) {
+   document.write("<tr bordercolor=red>");
+   for (var col=1; col<10; col++) {
+    document.write("<td bordercolor=blue background-color=blue><input name=row" + row + "[] type=number size=2 maxlength=1></td>");
+   }
+   document.write("</tr>");
+  }
+	 
+ </script> 
+ 
+  </table>
+ <p class="title">Sudoku Solver</p>
+ <button onclick="javascript:answers()">Solve It!</button> &nbsp; &nbsp;
+</form>
+ 
+</body>
+</html>
